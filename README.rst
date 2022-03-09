@@ -134,9 +134,9 @@
 Ready to use out of the box without boilerplate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The main concept of `Loguru` is that **there is one and only one** |logger|_.
+مفهوم اصلی ``Loguru`` این است که **یک و تنها یک** |logger|_ وجود دارد.
 
-For convenience, it is pre-configured and outputs to ``stderr`` to begin with (but that's entirely configurable).
+برای راحتی بیشتر، از پیش پیکربندی شده است و برای شروع به صورت ``stderr`` خروجی می‌دهد (اما این کاملاً قابل تنظیم است).
 
 ::
 
@@ -144,15 +144,15 @@ For convenience, it is pre-configured and outputs to ``stderr`` to begin with (b
 
     logger.debug("That's it, beautiful and simple logging!")
 
-The |logger|_ is just an interface which dispatches log messages to configured handlers. Simple, right?
+|logger|_ فقط یک رابط است که پیام های واقعه را به کنترل کننده های پیکربندی شده ارسال می کند. سادست، مگه نه؟
 
 
-No Handler, no Formatter, no Filter: one function to rule them all
+بدون نگه دارنده، قالب ساز و حتی فیلتر: یک تابع برای کنترل همه آنها
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-How to add a handler? How to set up logs formatting? How to filter messages? How to set level?
+چگونه یک نگه دارنده اضافه کنیم؟ چگونه قالب بندی گزارش ها را تنظیم کنیم؟ چگونه پیام ها را فیلتر کنیم؟ چگونه سطح را تنظیم کنیم؟
 
-One answer: the |add|_ function.
+جواب سادست با تابع |add|_ .
 
 ::
 
