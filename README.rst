@@ -24,7 +24,7 @@
 
 =========
 
-**Loguru** is a library which aims to bring enjoyable logging in Python.
+**Loguru** کتابخانه ای است که هدف آن ایجاد لاگ‌گیری (واقعه نگاری) لذت بخش در پایتون است.
 
 Did you ever feel lazy about configuring a logger and used ``print()`` instead?... I did, yet logging is fundamental to every application and eases the process of debugging. Using **Loguru** you have no excuse not to use logging from the start, this is as simple as ``from loguru import logger``.
 
