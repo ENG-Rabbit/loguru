@@ -40,7 +40,7 @@
     pip install loguru
 
 
-Features
+امکانات
 --------
 
 * `Ready to use out of the box without boilerplate`_
@@ -62,7 +62,7 @@ Features
 * `Exhaustive notifier`_
 * |strike| `10x faster than built-in logging`_ |/strike|
 
-Take the tour
+تور loguru گردی
 -------------
 
 .. highlight:: python3
