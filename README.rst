@@ -26,14 +26,13 @@
 
 **Loguru** کتابخانه ای است که هدف آن ایجاد لاگ‌گیری (واقعه نگاری) لذت بخش در پایتون است.
 
-Did you ever feel lazy about configuring a logger and used ``print()`` instead?... I did, yet logging is fundamental to every application and eases the process of debugging. Using **Loguru** you have no excuse not to use logging from the start, this is as simple as ``from loguru import logger``.
+آیا تا به حال در مورد پیکربندی یک واقع نگار احساس تنبلی کرده اید و آیا به جای آن از ``print()`` استفاده می کنید؟ با استفاده از Loguru شما هیچ بهانه ای برای عدم استفاده از واقعه نگار از ابتدا ندارید، این کار به سادگی from loguru import logger است.
 
-Also, this library is intended to make Python logging less painful by adding a bunch of useful functionalities that solve caveats of the standard loggers. Using logs in your application should be an automatism, **Loguru** tries to make it both pleasant and powerful.
-
+همچنین، این کتابخانه این را نیز در نظر گرفته است تا با افزودن دسته ای از توابع مفید که اخطارهای واقع نگارهای استاندارد را حل می کند، واقع نگاری پایتون را کمتر دردسرساز کند. استفاده از واقع در برنامه شما باید خودکار باشد، **Loguru** سعی می کند آن را هم دلپذیر و هم قدرتمند کند.
 
 .. end-of-readme-intro
 
-Installation
+نصب
 ------------
 
 ::
