@@ -142,7 +142,7 @@ Ready to use out of the box without boilerplate
 
     from loguru import logger
 
-    logger.debug("That's it, beautiful and simple logging!")
+    logger.debug("خود هودشه، واقع نگاری ساده و زیبا")
 
 |logger|_ فقط یک رابط است که پیام های واقعه را به کنترل کننده های پیکربندی شده ارسال می کند. سادست، مگه نه؟
 
