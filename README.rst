@@ -189,7 +189,8 @@ Ready to use out of the box without boilerplate
 
 ::
 
-    logger.info("اگر از پایتون {} استفاده می کنید، حتما {feature} را ترجیح می دهید!", 3.6, feature="f-strings")
+    logger.info("اگر از پایتون {} استفاده می کنید، حتما {feature} را ترجیح می دهید!",
+3.6, feature="f-strings")
 
 
 گرفتن و ثبت استثنائات داخل کد اصلی یا ریسه ها (threads)
