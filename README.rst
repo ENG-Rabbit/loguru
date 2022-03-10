@@ -73,7 +73,7 @@
 .. |add| replace:: ``()add``
 .. _add: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.add
 
-.. |حذف| replace:: ``حذف``
+.. |حذف| replace:: حذف
 .. _حذف: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.remove
 
 .. |complete| replace:: ``complete()``
