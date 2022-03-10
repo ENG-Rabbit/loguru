@@ -67,7 +67,7 @@
 
 .. highlight:: python3
 
-.. |logger| replace:: ``logger``
+.. |logger| replace:: ``لاگر``
 .. _logger: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger
 
 .. |add| replace:: ``()add``
@@ -79,7 +79,7 @@
 .. |complete| replace:: ``complete()``
 .. _complete: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.complete
 
-.. |catch| replace:: ``catch()``
+.. |catch| replace:: ``()catch``
 .. _catch: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.catch
 
 .. |bind| replace:: ``bind()``
@@ -189,13 +189,14 @@ Ready to use out of the box without boilerplate
 
 ::
 
-    logger.info("حتما {feature} را ترجیح می دهید، گر از پایتون {} استفاده می کنید.!", feature="f-strings",3.6)
+    logger.info("If you're using Python {}, prefer {feature} of course!", 3.6, feature="f-strings")
 
 
 گرفتن و ثبت استثنائات داخل کد اصلی یا ریسه ها (threads)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Have you ever seen your program crashing unexpectedly without seeing anything in the log file? Did you ever notice that exceptions occurring in threads were not logged? This can be solved using the |catch|_ decorator / context manager which ensures that any error is correctly propagated to the |logger|_.
+آیا تا به حال دیده اید که برنامه خود به طور غیرمنتظره ای از کار بیفتد بدون اینکه چیزی در فایل لاگ مشاهده کنید؟ آیا تا به حال متوجه شده اید که استثناهای رخ داده در رشته ها ثبت نشده اند؟ این را می توان با استفاده از _|catch| (به صورت دکوریتور یا داخل کد) حل کرد که تضمین می کند هر گونه خطا به درستی در |logger|_ منتشر می شود.
+
 
 ::
 
