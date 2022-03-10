@@ -173,26 +173,26 @@ Ready to use out of the box without boilerplate
 
 ::
 
-    logger.add("file_1.log", rotation="500 MB")    # به طور خودکار فایل های بزرگ را می چرخاند
-    logger.add("file_2.log", rotation="12:00")     # هر روز ظهر یک فایل جدید ایجاد می کند
-    logger.add("file_3.log", rotation="1 week")    # هر یک هفته فایل جدید ایجاد می کند
+    logger.add("file_1.log", rotation="500 MB")    # به طور خودکار فایل های بزرگ را میچرخونه
+    logger.add("file_2.log", rotation="12:00")     # هر روز ظهر یه فایل جدید ایجاد میکنه
+    logger.add("file_3.log", rotation="1 week")    # هر یه هفته فایل جدید ایجاد میکنه
 
-    logger.add("file_X.log", retention="10 days")  # بعد از یه مدت فایل پاک می شود
+    logger.add("file_X.log", retention="10 days")  # بعد از یه مدت فایل پاک میشه
 
-    logger.add("file_Y.log", compression="zip")    # فضای دوست داشتنیمان را بر می گردانیم
+    logger.add("file_Y.log", compression="zip")    # فضای دوست داشتنیمون رو بر می گردونه
 
 
 قالب بندی مدرن رشته ها  با استفاده از سبک آکولاد
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Loguru` favors the much more elegant and powerful ``{}`` formatting over ``%``, logging functions are actually equivalent to ``str.format()``.
+`Loguru` از قالب بندی بسیار زیباتر و قدرتمندتر ``{}`` بیش از``%`` استفاده می کند، توابع ورود به سیستم در واقع معادل ()str.format هستند.
 
 ::
 
-    logger.info("If you're using Python {}, prefer {feature} of course!", 3.6, feature="f-strings")
+    logger.info("اگر از پایتون {} استفاده می کنید، حتما {feature} را ترجیح می دهید!", 3.6, feature="f-strings")
 
 
-Exceptions catching within threads or main
+گرفتن و ثبت استثنائات داخل کد اصلی یا ریسه ها (threads)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Have you ever seen your program crashing unexpectedly without seeing anything in the log file? Did you ever notice that exceptions occurring in threads were not logged? This can be solved using the |catch|_ decorator / context manager which ensures that any error is correctly propagated to the |logger|_.
