@@ -158,7 +158,7 @@ Ready to use out of the box without boilerplate
 
     logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="INFO")
 
-این تابع برای ثبت `سینک ها`_ استفاده می شود که آنها مسئول مدیریت _`پیام های واقعه ` به شکل _`گزارشی از نوع دیکشنری` هستند. یک سینک می تواند اشکال مختلفی داشته باشد: یک تابع ساده، یک رشته رشته، یک شی فایل مانند، یک تابع موازی (coroutine) یا یک نگه دارنده داخلی.
+این تابع برای ثبت `سینک ها`_ استفاده می شود که آنها مسئول مدیریت `پیام های واقعه`_ به شکل `گزارشی از نوع دیکشنری`_ هستند. یک سینک می تواند اشکال مختلفی داشته باشد: یک تابع ساده، یک رشته رشته، یک شی فایل مانند، یک تابع موازی (coroutine) یا یک نگه دارنده داخلی.
 
 Note that you may also |remove|_ a previously added handler by using the identifier returned while adding it. This is particularly useful if you want to supersede the default ``stderr`` handler: just call ``logger.remove()`` to make a fresh start.
 
