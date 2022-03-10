@@ -115,9 +115,9 @@
 .. |parse| replace:: ``parse()``
 .. _parse: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.parse
 
-.. _sinks: https://loguru.readthedocs.io/en/stable/api/logger.html#sink
-.. _record dict: https://loguru.readthedocs.io/en/stable/api/logger.html#record
-.. _log messages: https://loguru.readthedocs.io/en/stable/api/logger.html#message
+.. _سینک ها: https://loguru.readthedocs.io/en/stable/api/logger.html#sink
+.. _گزارشی از نوع دیکشنری: https://loguru.readthedocs.io/en/stable/api/logger.html#record
+.. _پیام های واقعه: https://loguru.readthedocs.io/en/stable/api/logger.html#message
 .. _easily configurable: https://loguru.readthedocs.io/en/stable/api/logger.html#file
 .. _markup tags: https://loguru.readthedocs.io/en/stable/api/logger.html#color
 .. _fixes it: https://loguru.readthedocs.io/en/stable/api/logger.html#time
@@ -158,7 +158,7 @@ Ready to use out of the box without boilerplate
 
     logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="INFO")
 
-This function should be used to register sinks_ which are responsible for managing `log messages`_ contextualized with a `record dict`_. A sink can take many forms: a simple function, a string path, a file-like object, a coroutine function or a built-in Handler.
+این تابع برای ثبت `_سینک ها` استفاده می شود که آنها مسئول مدیریت `_پیام های واقعه ` به شکل ‘_گزارشی از نوع دیکشنری’ هستند. یک سینک می تواند اشکال مختلفی داشته باشد: یک تابع ساده، یک رشته رشته، یک شی فایل مانند، یک تابع موازی (coroutine) یا یک نگه دارنده داخلی.
 
 Note that you may also |remove|_ a previously added handler by using the identifier returned while adding it. This is particularly useful if you want to supersede the default ``stderr`` handler: just call ``logger.remove()`` to make a fresh start.
 
