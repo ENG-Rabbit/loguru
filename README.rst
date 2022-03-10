@@ -24,11 +24,11 @@
 
 =========
 
-**Loguru** کتابخانه ای است که هدف آن ایجاد لاگ‌گیری (واقعه نگاری) لذت بخش در پایتون است.
+**Loguru** کتابخانه ای است که هدف آن لاگ‌گیری لذت بخش در پایتون است.
 
-آیا تا به حال در مورد پیکربندی یک واقع نگار احساس تنبلی کرده اید و آیا به جای آن از ``()print`` استفاده می کنید؟ با استفاده از Loguru شما هیچ بهانه ای برای عدم استفاده از واقعه نگار از ابتدا ندارید، این کار به سادگی ``from loguru import logger`` است.
+آیا تا به حال در مورد پیکربندی یک لاگر احساس تنبلی کرده اید و آیا به جای آن از ``()print`` استفاده می کنید؟ با استفاده از Loguru شما هیچ بهانه ای برای عدم استفاده از لاگر از ابتدا ندارید، این کار به سادگی ``from loguru import logger`` است.
 
-همچنین، این کتابخانه این را نیز در نظر گرفته است تا با افزودن دسته ای از توابع مفید که اخطارهای واقع نگارهای استاندارد را حل می کند، واقع نگاری پایتون را کمتر دردسرساز کند. استفاده از واقع در برنامه شما باید خودکار باشد، **Loguru** سعی می کند آن را هم دلپذیر و هم قدرتمند کند.
+همچنین، این کتابخانه این را نیز در نظر گرفته است تا با افزودن دسته ای از توابع مفید که اخطارهای لاگ کردن های استاندارد را حل می کند، لاگینگ پایتون را کمتر دردسرساز کند. استفاده از لاگ در برنامه شما باید خودکار باشد، **Loguru** سعی می کند آن را هم دلپذیر و هم قدرتمند کند.
 
 .. end-of-readme-intro
 
@@ -118,7 +118,7 @@
 .. _سینک ها: https://loguru.readthedocs.io/en/stable/api/logger.html#sink
 .. _گزارشی از نوع دیکشنری: https://loguru.readthedocs.io/en/stable/api/logger.html#record
 .. _پیام های واقعه: https://loguru.readthedocs.io/en/stable/api/logger.html#message
-.. _easily configurable: https://loguru.readthedocs.io/en/stable/api/logger.html#file
+.. _به راحتی قابل تنظیم: https://loguru.readthedocs.io/en/stable/api/logger.html#file
 .. _markup tags: https://loguru.readthedocs.io/en/stable/api/logger.html#color
 .. _fixes it: https://loguru.readthedocs.io/en/stable/api/logger.html#time
 .. _No problem: https://loguru.readthedocs.io/en/stable/api/logger.html#env
@@ -142,9 +142,9 @@ Ready to use out of the box without boilerplate
 
     from loguru import logger
 
-    logger.debug("خود خودشه، یه واقع نگاری ساده و زیبا")
+    logger.debug("خود خودشه، یه لاگینگ ساده و زیبا")
 
-|logger|_ فقط یک رابط است که پیام های واقعه را به کنترل کننده های پیکربندی شده ارسال می کند. سادست، مگه نه؟
+|logger|_ فقط یک رابط است که پیام های لاگ را به کنترل کننده های پیکربندی شده ارسال می کند. سادست، مگه نه؟
 
 
 بدون نگه دارنده، قالب ساز و حتی فیلتر: یک تابع برای کنترل همه آنها
@@ -158,18 +158,18 @@ Ready to use out of the box without boilerplate
 
     logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="INFO")
 
-این تابع برای ثبت `سینک ها`_ استفاده می شود که آنها مسئول مدیریت `پیام های واقعه`_ به شکل `گزارشی از نوع دیکشنری`_ هستند. یک سینک می تواند اشکال مختلفی داشته باشد: یک تابع ساده، یک رشته آدرس، یک شی فایل مانند، یک تابع موازی (coroutine) یا یک نگه دارنده داخلی.
+این تابع برای ثبت `سینک ها`_ استفاده می شود که آنها مسئول مدیریت `پیام های لاگ ها`_ به شکل `گزارشی از نوع دیکشنری`_ هستند. یک سینک می تواند اشکال مختلفی داشته باشد: یک تابع ساده، یک رشته آدرس، یک شی فایل مانند، یک تابع موازی (coroutine) یا یک نگه دارنده داخلی.
 
 توجه داشته باشید که شما می‌توانید با استفاده از شناسه‌ای که هنگام اضافه کردن آن بازگردانده شده است، یک نگه دارنده که قبلاً اضافه شده را |حذف|_ کنید. این به ویژه در صورتی مفید است که می‌خواهید نگه دارنده پیش‌فرض ``stderr`` را جایگزین کنید: کافیست برای شروعی تازه، ()logger.remove را فراخوانی کنید.
 
 واقعه نگاری آسان تر درون یک فایل با rotation / retention / compression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you want to send logged messages to a file, you just have to use a string path as the sink. It can be automatically timed too for convenience::
+اگر شما می خواهید که پیام ها را داخل فایلی لاگ نمایید فقط کافیست از رشته آدرس فایل به عنوان یک سینک استفاده نمایید. همچنین برای راحتی می توان آن را به طور خودکار زمان بندی کرد::
 
     logger.add("file_{time}.log")
 
-It is also `easily configurable`_ if you need rotating logger, if you want to remove older logs, or if you wish to compress your files at closure.
+همچنین اگر به لاگر چرخشی نیاز دارید، اگر می‌خواهید گزارش‌های قدیمی‌تر را حذف کنید، یا اگر می‌خواهید فایل‌های خود را در زمان بسته شدن فشرده کنید، `به راحتی قابل تنظیم`_ است.
 
 ::
 
