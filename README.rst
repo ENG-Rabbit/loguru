@@ -117,7 +117,7 @@
 
 .. _سینک ها: https://loguru.readthedocs.io/en/stable/api/logger.html#sink
 .. _گزارشی از نوع دیکشنری: https://loguru.readthedocs.io/en/stable/api/logger.html#record
-.. _پیام های واقعه: https://loguru.readthedocs.io/en/stable/api/logger.html#message
+.. _پیام های لاگ ها: https://loguru.readthedocs.io/en/stable/api/logger.html#message
 .. _به راحتی قابل تنظیم: https://loguru.readthedocs.io/en/stable/api/logger.html#file
 .. _markup tags: https://loguru.readthedocs.io/en/stable/api/logger.html#color
 .. _fixes it: https://loguru.readthedocs.io/en/stable/api/logger.html#time
@@ -173,16 +173,16 @@ Ready to use out of the box without boilerplate
 
 ::
 
-    logger.add("file_1.log", rotation="500 MB")    # Automatically rotate too big file
-    logger.add("file_2.log", rotation="12:00")     # New file is created each day at noon
-    logger.add("file_3.log", rotation="1 week")    # Once the file is too old, it's rotated
+    logger.add("file_1.log", rotation="500 MB")    # به طور خودکار فایل های بزرگ را می چرخاند
+    logger.add("file_2.log", rotation="12:00")     # هر روز ظهر یک فایل جدید ایجاد می کند
+    logger.add("file_3.log", rotation="1 week")    # هر یک هفته فایل جدید ایجاد می کند
 
-    logger.add("file_X.log", retention="10 days")  # Cleanup after some time
+    logger.add("file_X.log", retention="10 days")  # بعد از یه مدت فایل پاک می شود
 
-    logger.add("file_Y.log", compression="zip")    # Save some loved space
+    logger.add("file_Y.log", compression="zip")    # فضای دوست داشتنیمان را بر می گردانیم
 
 
-Modern string formatting using braces style
+قالب بندی مدرن رشته ها  با استفاده از سبک آکولاد
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Loguru` favors the much more elegant and powerful ``{}`` formatting over ``%``, logging functions are actually equivalent to ``str.format()``.
