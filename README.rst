@@ -162,7 +162,7 @@ Ready to use out of the box without boilerplate
 
 توجه داشته باشید که شما می‌توانید با استفاده از شناسه‌ای که هنگام اضافه کردن آن بازگردانده شده است، یک نگه دارنده که قبلاً اضافه شده را |حذف|_ کنید. این به ویژه در صورتی مفید است که می‌خواهید نگه دارنده پیش‌فرض ``stderr`` را جایگزین کنید: کافیست برای شروعی تازه، ()logger.remove را فراخوانی کنید.
 
-Easier file logging with rotation / retention / compression
+واقعه نگاری آسان تر درون یک فایل با rotation / retention / compression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to send logged messages to a file, you just have to use a string path as the sink. It can be automatically timed too for convenience::
