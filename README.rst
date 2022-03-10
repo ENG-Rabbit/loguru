@@ -160,8 +160,7 @@ Ready to use out of the box without boilerplate
 
 این تابع برای ثبت `سینک ها`_ استفاده می شود که آنها مسئول مدیریت `پیام های واقعه`_ به شکل `گزارشی از نوع دیکشنری`_ هستند. یک سینک می تواند اشکال مختلفی داشته باشد: یک تابع ساده، یک رشته آدرس، یک شی فایل مانند، یک تابع موازی (coroutine) یا یک نگه دارنده داخلی.
 
-Note that you may also |remove|_ a previously added handler by using the identifier returned while adding it. This is particularly useful if you want to supersede the default ``stderr`` handler: just call ``logger.remove()`` to make a fresh start.
-
+توجه داشته باشید که شما می‌توانید با استفاده از شناسه‌ای که هنگام اضافه کردن آن بازگردانده شده است، یک نگه دارنده که قبلاً اضافه شده را |حذف|_ کنید. این به ویژه در صورتی مفید است که می‌خواهید نگه دارنده پیش‌فرض ``stderr`` را جایگزین کنید: کافیست برای شروعی تازه، logger.remove() را فراخوانی کنید.
 
 Easier file logging with rotation / retention / compression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
