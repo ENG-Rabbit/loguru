@@ -120,7 +120,7 @@
 .. _پیام های لاگ ها: https://loguru.readthedocs.io/en/stable/api/logger.html#message
 .. _به راحتی قابل تنظیم: https://loguru.readthedocs.io/en/stable/api/logger.html#file
 .. _برچسب های نشانه گذاری: https://loguru.readthedocs.io/en/stable/api/logger.html#color
-.. _fixes it: https://loguru.readthedocs.io/en/stable/api/logger.html#time
+.. _بر طرف می کند: https://loguru.readthedocs.io/en/stable/api/logger.html#time
 .. _No problem: https://loguru.readthedocs.io/en/stable/api/logger.html#env
 .. _logging levels: https://loguru.readthedocs.io/en/stable/api/logger.html#levels
 
@@ -337,7 +337,7 @@ Ready to use out of the box without boilerplate
 سطوح قابل تنظیم
 ^^^^^^^^^^^^^^^^^^^
 
-`Loguru` comes with all standard `logging levels`_ to which |trace|_ and |success|_ are added. Do you need more? Then, just create it by using the |level|_ function.
+`Loguru` با تمام سطوح گزارش استاندارد ارائه می شود که |trace|_ و |success|_ به آنها اضافه شده است. آیا بیشتر نیاز دارید؟ کافیه با استفاده از تابع |level|_ آن را ایجاد کنید.
 
 ::
 
@@ -346,20 +346,21 @@ Ready to use out of the box without boilerplate
     logger.log("SNAKY", "Here we go!")
 
 
-Better datetime handling
+مدیریت بهتر زمان و تاریخ
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The standard logging is bloated with arguments like ``datefmt`` or ``msecs``, ``%(asctime)s`` and ``%(created)s``, naive datetimes without timezone information, not intuitive formatting, etc. `Loguru` `fixes it`_:
+گزارش استاندارد با آرگومان‌هایی مانند ``datefmt`` یا ``msecs``، ``%(asctime)s`` و ``%(created)s``، زمان‌های تاریخ ساده بدون اطلاعات منطقه زمانی، قالب‌بندی بصری و غیره پر شده است. Loguru _`آن را `برطرف می‌کند:
 
 ::
 
     logger.add("file.log", format="{time:YYYY-MM-DD at HH:mm:ss} | {level} | {message}")
 
 
-Suitable for scripts and libraries
+مناسب برای اسکریپت ها و کتابخانه ها
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using the logger in your scripts is easy, and you can |configure|_ it at start. To use `Loguru` from inside a library, remember to never call |add|_ but use |disable|_ instead so logging functions become no-op. If a developer wishes to see your library's logs, he can |enable|_ it again.
+استفاده از لاگر در اسکریپت ها آسان است، و می توانید آن را در ابتدا پیکربندی(|configure|_) کنید. برای استفاده از `Loguru` از داخل یک کتابخانه، به یاد داشته باشید که هرگز |add|_ را فراخوانی نکنید، اما به جای آن از |disable|_ استفاده کنید تا توابع ثبت نام بدون عملیات باشد. اگر توسعه‌دهنده‌ای بخواهد گزارش‌های کتابخانه شما را ببیند، می‌تواند آن را دوباره |enable|_ کند.
 
 ::
 
