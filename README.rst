@@ -76,13 +76,13 @@
 .. |حذف| replace:: حذف
 .. _حذف: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.remove
 
-.. |complete| replace:: ``complete()``
+.. |complete| replace:: ``()complete``
 .. _complete: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.complete
 
 .. |catch| replace:: ``()catch``
 .. _catch: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.catch
 
-.. |bind| replace:: ``bind()``
+.. |bind| replace:: ``()bind``
 .. _bind: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.bind
 
 .. |contextualize| replace:: ``contextualize()``
@@ -209,7 +209,7 @@ Ready to use out of the box without boilerplate
 یه لاگینگ قشنگ رنگی
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-البته اگر ترمینال شما سازگار باشد `Loguru` به طور خودکار رنگ ها را به لاگ های شما اضافه می کند. شما می توانید با استفاده از `برچسب های نشانه گذاری`_ در قالب سینک، سبک مورد علاقه خود را تعریف کنید.
+`Loguru` به طور خودکار رنگ ها را به لاگ های شما اضافه می کند. شما می توانید با استفاده از `برچسب های نشانه گذاری`_ در قالب سینک، سبک مورد علاقه خود را تعریف کنید. البته اگر ترمینال شما سازگار باشد.
 
 ::
 
@@ -273,16 +273,16 @@ Ready to use out of the box without boilerplate
     ZeroDivisionError: division by zero
 
 
-Structured logging as needed
+لاگینگ ساختار یافته لازم دارید؟
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Want your logs to be serialized for easier parsing or to pass them around? Using the ``serialize`` argument, each log message will be converted to a JSON string before being sent to the configured sink.
+آیا می‌خواهید لاگ‌های شما برای تجزیه آسان‌تر سریالی شوند یا آنها را منتقل کنید؟ با استفاده از آرگومان ``serialize``، هر پیام لاگ قبل از ارسال به سینک پیکربندی شده به یک رشته JSON تبدیل می شود.
 
 ::
 
     logger.add(custom_sink_function, serialize=True)
 
-Using |bind|_ you can contextualize your logger messages by modifying the `extra` record attribute.
+با استفاده از |bind|_ می‌توانید پیام‌های لاگر خود را با تغییر ویژگی رکورد اضافی، به نمایش در آورید.
 
 ::
 
@@ -292,7 +292,7 @@ Using |bind|_ you can contextualize your logger messages by modifying the `extra
     context_logger.bind(user="someone_else").info("Inline binding of extra attribute")
     context_logger.info("Use kwargs to add context during formatting: {user}", user="anybody")
 
-It is possible to modify a context-local state temporarily with |contextualize|_:
+حتی میشه یه حالت موقتی با محتوای محلی با |contextualize|_ ایجاد کرد: 
 
 ::
 
@@ -300,7 +300,7 @@ It is possible to modify a context-local state temporarily with |contextualize|_
         do_something()
         logger.info("End of task")
 
-You can also have more fine-grained control over your logs by combining |bind|_ and ``filter``:
+شما همچنین می توانید با ترکیب |bind|_ و ``filter``، کنترل دقیق تری بر لاگ های خود داشته باشید:
 
 ::
 
@@ -308,7 +308,7 @@ You can also have more fine-grained control over your logs by combining |bind|_ 
     logger.debug("This message is not logged to the file")
     logger.bind(special=True).info("This message, though, is logged to the file!")
 
-Finally, the |patch|_ method allows dynamic values to be attached to the record dict of each new message:
+در نهایت، متد |patch|_ اجازه می‌دهد که مقادیر پویا به رکورد دیکشنری هر پیام جدید متصل شوند:
 
 ::
 
@@ -316,10 +316,10 @@ Finally, the |patch|_ method allows dynamic values to be attached to the record 
     logger = logger.patch(lambda record: record["extra"].update(utc=datetime.utcnow()))
 
 
-Lazy evaluation of expensive functions
+ارزیابی سست کارکرد های پرخرج
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sometime you would like to log verbose information without performance penalty in production, you can use the |opt|_ method to achieve this.
+گاهی اوقات می خواهید اطلاعات پرمخاطب را بدون جریمه عملکرد در تولید ثبت کنید، می توانید از روش |opt|_ برای رسیدن به این هدف استفاده کنید.
 
 ::
 
@@ -334,7 +334,7 @@ Sometime you would like to log verbose information without performance penalty i
     logger.opt(capture=False).info("Keyword arguments not added to {dest} dict", dest="extra")
 
 
-Customizable levels
+سطوح قابل تنظیم
 ^^^^^^^^^^^^^^^^^^^
 
 `Loguru` comes with all standard `logging levels`_ to which |trace|_ and |success|_ are added. Do you need more? Then, just create it by using the |level|_ function.
