@@ -440,7 +440,7 @@ Ready to use out of the box without boilerplate
 یه تجزیه کننده راحت
 ^^^^^^^^^^^^^^^^^
 
-It is often useful to extract specific information from generated logs, this is why `Loguru` provides a |parse|_ method which helps to deal with logs and regexes.
+استخراج اطلاعات خاص از لاگ های تولید شده اغلب مفید است، به همین دلیل است که `Loguru` یک روش |parse|_ ارائه می دهد که به مقابله با گزارش ها و regexes کمک می کند.
 
 ::
 
@@ -452,10 +452,10 @@ It is often useful to extract specific information from generated logs, this is 
         # {"level": 30, "message": "Log example", "time": datetime(2018, 12, 09, 11, 23, 55)}
 
 
-Exhaustive notifier
+یه اطلاع دهنده کامل و جامع
 ^^^^^^^^^^^^^^^^^^^
 
-`Loguru` can easily be combined with the great |notifiers|_ library (must be installed separately) to receive an e-mail when your program fail unexpectedly or to send many other kind of notifications.
+`Loguru` را می‌توان به راحتی با کتابخانه |notifiers|_ عالی ترکیب کرد (باید به طور جداگانه نصب شود) تا زمانی که برنامه شما به‌طور غیرمنتظره‌ای از کار می‌افتد، ایمیل دریافت کند یا بسیاری از انواع دیگر اعلان‌ها را ارسال کند.
 
 ::
 
@@ -480,13 +480,12 @@ Exhaustive notifier
 
 |strike|
 
-10x faster than built-in logging
+10 برابر سریعتر از لاگینگ داخلی
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |/strike|
 
-Although logging impact on performances is in most cases negligible, a zero-cost logger would allow to use it anywhere without much concern. In an upcoming release, Loguru's critical functions will be implemented in C for maximum speed.
-
+اگرچه تأثیر لاگ بر روی عملکردها در بیشتر موارد ناچیز است، یک لاگر با هزینه صفر اجازه می دهد تا بدون نگرانی زیاد از آن در هر مکانی استفاده کنید. در نسخه آینده، توابع حیاتی `Loguru` در C برای حداکثر سرعت پیاده سازی خواهند شد.
 
 .. |strike| raw:: html
 
@@ -499,7 +498,7 @@ Although logging impact on performances is in most cases negligible, a zero-cost
 .. end-of-readme-usage
 
 
-Documentation
+مستندات
 -------------
 
 * `API Reference <https://loguru.readthedocs.io/en/stable/api/logger.html>`_
