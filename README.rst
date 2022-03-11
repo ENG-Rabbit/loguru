@@ -121,7 +121,7 @@
 .. _به راحتی قابل تنظیم: https://loguru.readthedocs.io/en/stable/api/logger.html#file
 .. _برچسب های نشانه گذاری: https://loguru.readthedocs.io/en/stable/api/logger.html#color
 .. _بر طرف می کند: https://loguru.readthedocs.io/en/stable/api/logger.html#time
-.. _No problem: https://loguru.readthedocs.io/en/stable/api/logger.html#env
+.. _مشکلی نست: https://loguru.readthedocs.io/en/stable/api/logger.html#env
 .. _logging levels: https://loguru.readthedocs.io/en/stable/api/logger.html#levels
 
 .. |better_exceptions| replace:: ``better_exceptions``
@@ -400,7 +400,6 @@ Ready to use out of the box without boilerplate
 
     logger.add(PropagateHandler(), format="{message}")
 
-Want to intercept standard `logging` messages toward your `Loguru` sinks?
 آیا می خواهید پیام های لاگینگ استاندارد را از سینک های `Loguru` خود جدا کنید؟
 
 ::
@@ -427,7 +426,9 @@ Want to intercept standard `logging` messages toward your `Loguru` sinks?
 پیش فرض های قابل شخصی سازی از طریق متغیرهای محیطی
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Don't like the default logger formatting? Would prefer another ``DEBUG`` color? `No problem`_::
+قالب پیش فرض لاگر را دوست ندارید؟ آیا رنگ ``DEBUG`` _`دیگری را ترجیح می دهید؟ `مشکلی نیست:
+
+::
 
     # Linux / OSX
     export LOGURU_FORMAT="{time} | <lvl>{message}</lvl>"
@@ -436,7 +437,7 @@ Don't like the default logger formatting? Would prefer another ``DEBUG`` color? 
     setx LOGURU_DEBUG_COLOR "<green>"
 
 
-Convenient parser
+یه تجزیه کننده راحت
 ^^^^^^^^^^^^^^^^^
 
 It is often useful to extract specific information from generated logs, this is why `Loguru` provides a |parse|_ method which helps to deal with logs and regexes.
