@@ -43,24 +43,24 @@
 امکانات
 --------
 
-* `Ready to use out of the box without boilerplate`_
-* `No Handler, no Formatter, no Filter: one function to rule them all`_
-* `Easier file logging with rotation / retention / compression`_
-* `Modern string formatting using braces style`_
-* `Exceptions catching within threads or main`_
-* `Pretty logging with colors`_
-* `Asynchronous, Thread-safe, Multiprocess-safe`_
-* `Fully descriptive exceptions`_
-* `Structured logging as needed`_
-* `Lazy evaluation of expensive functions`_
-* `Customizable levels`_
-* `Better datetime handling`_
-* `Suitable for scripts and libraries`_
-* `Entirely compatible with standard logging`_
-* `Personalizable defaults through environment variables`_
-* `Convenient parser`_
-* `Exhaustive notifier`_
-* |strike| `10x faster than built-in logging`_ |/strike|
+* `آماده باز کردن یه بسته `Logur` هستی؟`_
+* `بدون نگه دارنده، قالب ساز و حتی فیلتر: یک تابع برای کنترل همه آنها`_
+* `واقعه نگاری آسان تر درون یک فایل با rotation / retention / compression`_
+* `قالب بندی مدرن رشته ها  با استفاده از سبک آکولاد`_
+* `گرفتن و ثبت استثنائات داخل کد اصلی یا ریسه ها (threads)`_
+* `یه لاگینگ قشنگ رنگی`_
+* `ناهمزمان، ایمن برای ریسه ها(Theard)، ایمن برای چند فرآیندی`_
+* `استثناهای کاملاً توصیف شده`_
+* `لاگینگ ساختار یافته لازم دارید؟`_
+* `ارزیابی سست کارکرد های پرخرج`_
+* `سطوح قابل تنظیم`_
+* `مدیریت بهتر زمان و تاریخ`_
+* `مناسب برای اسکریپت ها و کتابخانه ها`_
+* `کاملا به لاگینگ استاندارد سازگار است`_
+* `پیش فرض های قابل شخصی سازی از طریق متغیرهای محیطی`_
+* `یه تجزیه کننده راحت`_
+* `یه اطلاع دهنده کامل و جامع`_
+* |strike| `10 برابر سریعتر از لاگینگ داخلی`_ |/strike|
 
 تور loguru گردی
 -------------
@@ -131,7 +131,7 @@
 .. _notifiers: https://github.com/notifiers/notifiers
 
 
-Ready to use out of the box without boilerplate
+آماده باز کردن یه بسته `Logur` هستی؟
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 مفهوم اصلی ``Loguru`` این است که **یک و تنها یک** |logger|_ وجود دارد.
