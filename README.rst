@@ -120,7 +120,7 @@
 .. _پیام های لاگ ها: https://loguru.readthedocs.io/en/stable/api/logger.html#message
 .. _به راحتی قابل تنظیم: https://loguru.readthedocs.io/en/stable/api/logger.html#file
 .. _برچسب های نشانه گذاری: https://loguru.readthedocs.io/en/stable/api/logger.html#color
-.. _برطرف می‌کند: https://loguru.readthedocs.io/en/stable/api/logger.html#time
+.. _بر طرف می‌ کند: https://loguru.readthedocs.io/en/stable/api/logger.html#time
 .. _مشکلی نیست: https://loguru.readthedocs.io/en/stable/api/logger.html#env
 .. _سطوح لاگینگ: https://loguru.readthedocs.io/en/stable/api/logger.html#levels
 
@@ -349,7 +349,7 @@ Ready to use out of the box without boilerplate
 مدیریت بهتر زمان و تاریخ
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-لاگینگ استاندارد با آرگومان‌هایی مانند ``datefmt`` یا ``msecs``، ``%(asctime)s`` و ``%(created)s``، زمان‌های تاریخ ساده بدون اطلاعات منطقه زمانی، قالب‌بندی بصری و غیره پر شده است. `Loguru` _`آن را `برطرف می‌کند:
+لاگینگ استاندارد با آرگومان‌هایی مانند ``datefmt`` یا ``msecs``، ``%(asctime)s`` و ``%(created)s``، زمان‌های تاریخ ساده بدون اطلاعات منطقه زمانی، قالب‌بندی بصری و غیره پر شده است. `Loguru` _`آن را `بر طرف می‌ کند:
 
 ::
 
