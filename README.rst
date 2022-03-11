@@ -85,34 +85,34 @@
 .. |bind| replace:: ``()bind``
 .. _bind: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.bind
 
-.. |contextualize| replace:: ``contextualize()``
+.. |contextualize| replace:: ``()contextualize``
 .. _contextualize: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.contextualize
 
-.. |patch| replace:: ``patch()``
+.. |patch| replace:: ``()patch``
 .. _patch: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.patch
 
-.. |opt| replace:: ``opt()``
+.. |opt| replace:: ``()opt``
 .. _opt: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.opt
 
-.. |trace| replace:: ``trace()``
+.. |trace| replace:: ``()trace``
 .. _trace: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.trace
 
-.. |success| replace:: ``success()``
+.. |success| replace:: ``()success``
 .. _success: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.success
 
-.. |level| replace:: ``level()``
+.. |level| replace:: ``()level``
 .. _level: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.level
 
-.. |configure| replace:: ``configure()``
+.. |configure| replace:: ``()configure``
 .. _configure: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.configure
 
-.. |disable| replace:: ``disable()``
+.. |disable| replace:: ``()disable``
 .. _disable: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.disable
 
-.. |enable| replace:: ``enable()``
+.. |enable| replace:: ``()enable``
 .. _enable: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.enable
 
-.. |parse| replace:: ``parse()``
+.. |parse| replace:: ``()parse``
 .. _parse: https://loguru.readthedocs.io/en/stable/api/logger.html#loguru._logger.Logger.parse
 
 .. _سینک ها: https://loguru.readthedocs.io/en/stable/api/logger.html#sink
