@@ -120,9 +120,9 @@
 .. _پیام های لاگ ها: https://loguru.readthedocs.io/en/stable/api/logger.html#message
 .. _به راحتی قابل تنظیم: https://loguru.readthedocs.io/en/stable/api/logger.html#file
 .. _برچسب های نشانه گذاری: https://loguru.readthedocs.io/en/stable/api/logger.html#color
-.. _بر طرف می کند: https://loguru.readthedocs.io/en/stable/api/logger.html#time
+.. _برطرف می‌کند: https://loguru.readthedocs.io/en/stable/api/logger.html#time
 .. _مشکلی نست: https://loguru.readthedocs.io/en/stable/api/logger.html#env
-.. _logging levels: https://loguru.readthedocs.io/en/stable/api/logger.html#levels
+.. _سطوح لاگینگ: https://loguru.readthedocs.io/en/stable/api/logger.html#levels
 
 .. |better_exceptions| replace:: ``better_exceptions``
 .. _better_exceptions: https://github.com/Qix-/better-exceptions
@@ -337,7 +337,7 @@ Ready to use out of the box without boilerplate
 سطوح قابل تنظیم
 ^^^^^^^^^^^^^^^^^^^
 
-`Loguru` با تمام سطوح گزارش استاندارد ارائه می شود که |trace|_ و |success|_ به آنها اضافه شده است. آیا بیشتر نیاز دارید؟ کافیه با استفاده از تابع |level|_ آن را ایجاد کنید.
+`Loguru` با تمام |سطوح لاگینگ|_ استاندارد ارائه می شود که |trace|_ و |success|_ به آنها اضافه شده است. آیا بیشتر نیاز دارید؟ کافیه با استفاده از تابع |level|_ آن را ایجاد کنید.
 
 ::
 
@@ -349,7 +349,7 @@ Ready to use out of the box without boilerplate
 مدیریت بهتر زمان و تاریخ
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-گزارش استاندارد با آرگومان‌هایی مانند ``datefmt`` یا ``msecs``، ``%(asctime)s`` و ``%(created)s``، زمان‌های تاریخ ساده بدون اطلاعات منطقه زمانی، قالب‌بندی بصری و غیره پر شده است. Loguru _`آن را `برطرف می‌کند:
+لاگینگ استاندارد با آرگومان‌هایی مانند ``datefmt`` یا ``msecs``، ``%(asctime)s`` و ``%(created)s``، زمان‌های تاریخ ساده بدون اطلاعات منطقه زمانی، قالب‌بندی بصری و غیره پر شده است. Loguru _`آن را `برطرف می‌کند:
 
 ::
 
