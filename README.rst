@@ -119,7 +119,7 @@
 .. _گزارشی از نوع دیکشنری: https://loguru.readthedocs.io/en/stable/api/logger.html#record
 .. _پیام های لاگ ها: https://loguru.readthedocs.io/en/stable/api/logger.html#message
 .. _به راحتی قابل تنظیم: https://loguru.readthedocs.io/en/stable/api/logger.html#file
-.. _markup tags: https://loguru.readthedocs.io/en/stable/api/logger.html#color
+.. _برچسب های نشانه گذاری: https://loguru.readthedocs.io/en/stable/api/logger.html#color
 .. _fixes it: https://loguru.readthedocs.io/en/stable/api/logger.html#time
 .. _No problem: https://loguru.readthedocs.io/en/stable/api/logger.html#env
 .. _logging levels: https://loguru.readthedocs.io/en/stable/api/logger.html#levels
@@ -206,34 +206,36 @@ Ready to use out of the box without boilerplate
         return 1 / (x + y + z)
 
 
-Pretty logging with colors
+یه لاگینگ قشنگ رنگی
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Loguru` automatically adds colors to your logs if your terminal is compatible. You can define your favorite style by using `markup tags`_ in the sink format.
+البته اگر ترمینال شما سازگار باشد `Loguru` به طور خودکار رنگ ها را به لاگ های شما اضافه می کند. شما می توانید با استفاده از `برچسب های نشانه گذاری`_ در قالب سینک، سبک مورد علاقه خود را تعریف کنید.
 
 ::
 
     logger.add(sys.stdout, colorize=True, format="<green>{time}</green> <level>{message}</level>")
 
 
-Asynchronous, Thread-safe, Multiprocess-safe
+ناهمزمان، ایمن برای ریسه ها(Theard)، ایمن برای چند فرآیندی
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All sinks added to the |logger|_ are thread-safe by default. They are not multiprocess-safe, but you can ``enqueue`` the messages to ensure logs integrity. This same argument can also be used if you want async logging.
+تمام سینک های اضافه شده به |لاگر|_ به طور پیش فرض در برابر ریسه ها (Theard) امن هستند. آنها برای چند فرآیندی ایمن نیستند، اما می‌توانید پیام‌ها را در صف قرار دهید (``enqueue``) تا از یکپارچگی لاگ ها اطمینان حاصل کنید. اگر می‌خواهید گزارش غیرهمگام داشته باشید، می‌توانید از همین آرگومان استفاده کنید.
+
 
 ::
 
     logger.add("somefile.log", enqueue=True)
 
-Coroutine functions used as sinks are also supported and should be awaited with |complete|_.
+توابع کوروتین که به عنوان سینک استفاده می‌شوند نیز پشتیبانی می‌شوند و باید با |complete|_ در انتظار آن‌ها باشیم.
 
 
-Fully descriptive exceptions
+استثناهای کاملاً توصیف شده
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Logging exceptions that occur in your code is important to track bugs, but it's quite useless if you don't know why it failed. `Loguru` helps you identify problems by allowing the entire stack trace to be displayed, including values of variables (thanks |better_exceptions|_ for this!).
+ثبت استثناهایی که در کد شما اتفاق می‌افتد برای ردیابی باگ‌ها مهم است، اما اگر ندانید چرا شکست خورده است، کاملاً بی‌فایده است. `Loguru` به شما کمک می کند تا با اجازه دادن به نمایش کل ردیابی پشته، از جمله مقادیر متغیرها، مشکلات را شناسایی کنید(از _|better_exceptions| برای این قابلیت تشکر می کنیم!).
 
-The code::
+کد::
 
     logger.add("out.log", backtrace=True, diagnose=True)  # Caution, may leak sensitive data in prod
 
@@ -248,7 +250,7 @@ The code::
 
     nested(0)
 
-Would result in:
+منجر به این میشه:
 
 .. code-block:: none
 
