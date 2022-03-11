@@ -359,7 +359,7 @@ Ready to use out of the box without boilerplate
 مناسب برای اسکریپت ها و کتابخانه ها
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-استفاده از لاگر در اسکریپت ها آسان است، و می توانید آن را در ابتدا پیکربندی(|configure|_) کنید. برای استفاده از `Loguru` از داخل یک کتابخانه، به یاد داشته باشید که هرگز |add|_ را فراخوانی نکنید، اما به جای آن از |disable|_ استفاده کنید تا توابع ثبت نام بدون عملیات باشد. اگر توسعه‌دهنده‌ای بخواهد گزارش‌های کتابخانه شما را ببیند، می‌تواند آن را دوباره |enable|_ کند.
+استفاده از لاگر در اسکریپت ها آسان است، و می توانید آن را در ابتدا پیکربندی(|configure|_) کنید. برای استفاده از `Loguru` در داخل یک کتابخانه، به یاد داشته باشید که هرگز |add|_ را فراخوانی نکنید، اما به جای آن از |disable|_ استفاده کنید تا توابع لاگینگ بدون عملیات باشد. اگر توسعه‌دهنده‌ای بخواهد لاگ های کتابخانه شما را ببیند، می‌تواند آن را دوباره |enable|_ کند.
 
 ::
 
@@ -380,17 +380,17 @@ Ready to use out of the box without boilerplate
     logger.info("This message however is propagated to the sinks")
 
 
-Entirely compatible with standard logging
+کاملا به لاگینگ استاندارد سازگار است
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Wish to use built-in logging ``Handler`` as a `Loguru` sink?
+آیا می خواهید از ``Handler`` داخلی به عنوان سینک `Loguru` استفاده کنید؟
 
 ::
 
     handler = logging.handlers.SysLogHandler(address=('localhost', 514))
     logger.add(handler)
 
-Need to propagate `Loguru` messages to standard `logging`?
+آیا نیاز دارید که `Loguru` را به لاگینگ استاندارد متصل کنید؟
 
 ::
 
@@ -401,6 +401,7 @@ Need to propagate `Loguru` messages to standard `logging`?
     logger.add(PropagateHandler(), format="{message}")
 
 Want to intercept standard `logging` messages toward your `Loguru` sinks?
+آیا می خواهید پیام های لاگینگ استاندارد را از سینک های `Loguru` خود جدا کنید؟
 
 ::
 
@@ -423,7 +424,7 @@ Want to intercept standard `logging` messages toward your `Loguru` sinks?
     logging.basicConfig(handlers=[InterceptHandler()], level=0)
 
 
-Personalizable defaults through environment variables
+پیش فرض های قابل شخصی سازی از طریق متغیرهای محیطی
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Don't like the default logger formatting? Would prefer another ``DEBUG`` color? `No problem`_::
