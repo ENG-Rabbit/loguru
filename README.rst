@@ -359,7 +359,6 @@ Ready to use out of the box without boilerplate
 مناسب برای اسکریپت ها و کتابخانه ها
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Using the logger in your scripts is easy, and you can |configure|_ it at start. To use `Loguru` from inside a library, remember to never call |add|_ but use |disable|_ instead so logging functions become no-op. If a developer wishes to see your library's logs, he can |enable|_ it again.
 استفاده از لاگر در اسکریپت ها آسان است، و می توانید آن را در ابتدا پیکربندی(|configure|_) کنید. برای استفاده از `Loguru` از داخل یک کتابخانه، به یاد داشته باشید که هرگز |add|_ را فراخوانی نکنید، اما به جای آن از |disable|_ استفاده کنید تا توابع ثبت نام بدون عملیات باشد. اگر توسعه‌دهنده‌ای بخواهد گزارش‌های کتابخانه شما را ببیند، می‌تواند آن را دوباره |enable|_ کند.
 
 ::
