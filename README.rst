@@ -121,7 +121,7 @@
 .. _به راحتی قابل تنظیم: https://loguru.readthedocs.io/en/stable/api/logger.html#file
 .. _برچسب های نشانه گذاری: https://loguru.readthedocs.io/en/stable/api/logger.html#color
 .. _برطرف می‌کند: https://loguru.readthedocs.io/en/stable/api/logger.html#time
-.. _مشکلی نست: https://loguru.readthedocs.io/en/stable/api/logger.html#env
+.. _مشکلی نیست: https://loguru.readthedocs.io/en/stable/api/logger.html#env
 .. _سطوح لاگینگ: https://loguru.readthedocs.io/en/stable/api/logger.html#levels
 
 .. |better_exceptions| replace:: ``better_exceptions``
@@ -426,7 +426,7 @@ Ready to use out of the box without boilerplate
 پیش فرض های قابل شخصی سازی از طریق متغیرهای محیطی
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-قالب پیش فرض لاگر را دوست ندارید؟ آیا رنگ ``DEBUG`` `دیگری را ترجیح می دهید؟ _`مشکلی نیست:
+قالب پیش فرض لاگر را دوست ندارید؟ آیا رنگ ``DEBUG`` _`دیگری را ترجیح می دهید؟ `مشکلی نیست:
 
 ::
 
